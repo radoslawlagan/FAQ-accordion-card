@@ -112,7 +112,7 @@ body {
 
 .faq__question {
   margin: 1em 0;
-  padding-right: 1em;
+  padding-right: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
