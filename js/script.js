@@ -1,14 +1,16 @@
-const faq = document.querySelectorAll('.faq');
-const question = document.querySelectorAll('.faq__question');
-const answer = document.querySelectorAll('.faq__answer');
+const faqs = document.querySelectorAll('.faq');
+const questions = document.querySelectorAll('.faq__question');
+const answers = document.querySelectorAll('.faq__answer');
+const arrows = document.querySelectorAll('.faq__img');
 
 // console.log(faq);
 // console.log(question);
 // console.log(answer);
 
-const roll = () => {
-	question.classList.toggle('active');
-	answer.classList.toggle('hidden');
+const roll = (e) => {
+	questions.forEach((question) => question.classList.toggle('active'));
+	answers.forEach((answer) => answer.classList.toggle('hidden'));
+	arrows.forEach((arrow) => arrow.classList.toggle('rotate'));
 };
 
-faq.addEventListener('click', roll);
+faqs.forEach((faq) => faq.addEventListener('click', roll));

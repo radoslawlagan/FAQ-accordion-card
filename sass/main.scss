@@ -33,6 +33,10 @@ body {
 	font-weight: 700;
 }
 
+.rotate {
+	transform: rotate(180deg);
+}
+
 .container {
 	position: relative;
 	background-color: $white;
@@ -44,17 +48,20 @@ body {
 	&__img--1 {
 		@include img-mobile;
 		top: -5%;
+		z-index: 2;
 		content: url(../images/illustration-woman-online-mobile.svg);
 	}
 
 	&__img--2 {
 		@include img-mobile;
 		top: 10%;
+		z-index: 1;
 		content: url(../images/bg-pattern-mobile.svg);
 	}
 
 	&__img--3 {
 		display: none;
+		z-index: 3;
 	}
 }
 
@@ -77,6 +84,7 @@ body {
 		position: absolute;
 		top: 5px;
 		right: 0;
+		transition: transform 0.5s;
 	}
 
 	&__question {
@@ -89,13 +97,16 @@ body {
 
 	&__answer {
 		margin: 1em 0;
+		width: 95%;
 		color: $dark-grayish-blue;
+		text-align: justify;
+		hyphens: auto;
 	}
 }
 
 @media (min-width: 998px) {
 	.container {
-		padding: 5em 7em;
+		padding: 6em 7em;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
@@ -105,22 +116,22 @@ body {
 		&__img--1 {
 			@include img-desktop;
 			top: 50%;
-			left: 15%;
-			width: 400px;
+			left: 17%;
+			width: 425px;
 			content: url(../images/illustration-woman-online-desktop.svg);
 		}
 		&__img--2 {
 			@include img-desktop;
-			top: 30%;
-			left: -6%;
-			width: 90%;
+			top: 38%;
+			left: -4%;
+			width: 92%;
 			content: url(../images/bg-pattern-desktop.svg);
 		}
 		&__img--3 {
 			@include img-desktop;
 			top: 58%;
-			left: 0;
-			width: 16%;
+			left: 0.15%;
+			width: 18%;
 			display: block;
 			content: url(../images/illustration-box-desktop.svg);
 		}
@@ -132,7 +143,20 @@ body {
 		text-align: left;
 
 		&__heading {
+			font-size: 3.2rem;
 			margin-block: 0em 1em;
+		}
+	}
+
+	.faq {
+		&__question {
+			margin: 1em 0;
+			font-size: 1.4rem;
+		}
+
+		&__answer {
+			margin: 1em 0;
+			font-size: 1.3rem;
 		}
 	}
 }
