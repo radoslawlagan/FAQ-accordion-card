@@ -1,0 +1,138 @@
+@import './colors';
+@import './mixins';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2em;
+	font-family: 'Kumbh Sans', sans-serif;
+	background: linear-gradient($soft-violet, $soft-blue);
+	color: $very-dark-desaturated-blue;
+}
+
+.hidden {
+	display: none;
+}
+
+.active {
+	font-weight: 700;
+}
+
+.container {
+	position: relative;
+	background-color: $white;
+	padding: 5em 2em;
+	width: clamp(100px, 80%, 850px);
+	border-radius: 30px;
+	box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.4);
+
+	&__img--1 {
+		@include img-mobile;
+		top: -5%;
+		content: url(/images/illustration-woman-online-mobile.svg);
+	}
+
+	&__img--2 {
+		@include img-mobile;
+		top: 10%;
+		content: url(/images/bg-pattern-mobile.svg);
+	}
+
+	&__img--3 {
+		display: none;
+	}
+}
+
+.text__container {
+	text-align: center;
+	&__heading {
+		margin-block: 2em 0.8em;
+		font-size: 3rem;
+		text-transform: uppercase;
+	}
+}
+
+.faq {
+	border-bottom: solid 1px $light-grayish-blue;
+	position: relative;
+	text-align: left;
+	cursor: pointer;
+
+	&__img {
+		position: absolute;
+		top: 5px;
+		right: 0;
+	}
+
+	&__question {
+		margin: 1em 0;
+		padding-right: 1em;
+		display: flex;
+		font-size: 1.3rem;
+		color: $very-dark-grayish-blue;
+	}
+
+	&__answer {
+		margin: 1em 0;
+		color: $dark-grayish-blue;
+	}
+}
+
+@media (min-width: 998px) {
+	.container {
+		padding: 5em 7em;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		overflow: hidden;
+		// min-height: 500px;
+
+		&__img--1 {
+			@include img-desktop;
+			top: 50%;
+			left: 15%;
+			width: 400px;
+			content: url(/images/illustration-woman-online-desktop.svg);
+		}
+		&__img--2 {
+			@include img-desktop;
+			top: 30%;
+			left: -6%;
+			width: 90%;
+			content: url(/images/bg-pattern-desktop.svg);
+		}
+		&__img--3 {
+			@include img-desktop;
+			top: 58%;
+			left: 0;
+			width: 16%;
+			display: block;
+			content: url(/images/illustration-box-desktop.svg);
+		}
+	}
+
+	.text__container {
+		width: 50%;
+		// background-color: red;
+		text-align: left;
+
+		&__heading {
+			margin-block: 0em 1em;
+		}
+	}
+}

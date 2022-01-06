@@ -1,0 +1,11 @@
+@mixin img-mobile {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: clamp(200px, 70%, 300px);
+}
+
+@mixin img-desktop {
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
