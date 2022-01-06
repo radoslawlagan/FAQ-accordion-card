@@ -44,13 +44,13 @@ body {
 	&__img--1 {
 		@include img-mobile;
 		top: -5%;
-		content: url(/images/illustration-woman-online-mobile.svg);
+		content: url(../images/illustration-woman-online-mobile.svg);
 	}
 
 	&__img--2 {
 		@include img-mobile;
 		top: 10%;
-		content: url(/images/bg-pattern-mobile.svg);
+		content: url(../images/bg-pattern-mobile.svg);
 	}
 
 	&__img--3 {
@@ -107,14 +107,14 @@ body {
 			top: 50%;
 			left: 15%;
 			width: 400px;
-			content: url(/images/illustration-woman-online-desktop.svg);
+			content: url(../images/illustration-woman-online-desktop.svg);
 		}
 		&__img--2 {
 			@include img-desktop;
 			top: 30%;
 			left: -6%;
 			width: 90%;
-			content: url(/images/bg-pattern-desktop.svg);
+			content: url(../images/bg-pattern-desktop.svg);
 		}
 		&__img--3 {
 			@include img-desktop;
@@ -122,7 +122,7 @@ body {
 			left: 0;
 			width: 16%;
 			display: block;
-			content: url(/images/illustration-box-desktop.svg);
+			content: url(../images/illustration-box-desktop.svg);
 		}
 	}
 
