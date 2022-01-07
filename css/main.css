@@ -130,6 +130,21 @@ body {
           hyphens: auto;
 }
 
+.attribution {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.attribution__link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.attribution__link:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 998px) {
   .container {
     padding: 6em 7em;
