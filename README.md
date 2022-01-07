@@ -29,3 +29,4 @@ Users should be able to:
 - BEM
 - Flexbox
 - Mobile-first workflow
+- JS

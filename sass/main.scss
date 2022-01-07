@@ -93,6 +93,11 @@ body {
 		display: flex;
 		font-size: 1.3rem;
 		color: $very-dark-grayish-blue;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $soft-red;
+		}
 	}
 
 	&__answer {
